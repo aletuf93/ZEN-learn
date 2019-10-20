@@ -79,13 +79,13 @@ df.iloc[0] # first row
 df.iloc[0, 0] # first item of first row
 df.iloc[0, 0] = 55
 
-#row select (use LOC)
+#row select (use ILOC)
 for i in range(users.shape[0]):
     row = df.iloc[i]
     row.age *= 100 # setting a copy, and not the original frame data.
 print(df) # df is not modified
 
-#row edit (use ILOC=>it accesses the INDEX of the row)
+#row edit (use LOC=>it accesses the INDEX of the row)
 df = users.copy().reset_index(drop=True)
 df.loc[0] # first row
 df.loc[0, "age"] # first item of first row
